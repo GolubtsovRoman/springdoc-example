@@ -11,3 +11,20 @@ Spring-doc это по сути интеграция swagger в spring. Подк
 Некоторые аннотации (из swagger) просто заменяются
 - @ApiOperation -> @Operation
 - @ApiParam -> @Parameter
+
+
+Настраивается через параметры в application.yml
+```yaml
+springdoc:
+  api-docs.path: /api-docs
+  swagger-ui.path: /swagger-ui.html
+```
+Таким образом ссылка на приложение будет
+```
+http://localhost:8081/swagger-ui.html
+```
+редиректит на
+```
+http://localhost:8081/swagger-ui/index.html
+```
+При настройке безопастности учесть все пути spring-doc
